@@ -1,0 +1,762 @@
+---
+title: "R-Ladies São Paulo<br> um espaço de ensino-aprendizagem"
+subtitle: "<center><img src= 'img/allisonhorst/community1.jpg' width = '20%' alt='Author: Allison Horst'></br><p>Imagem por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center> "
+author: "<center>Haydee Svab<br> 09/06/2021</center>"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, "css/metropolis.css", "css/metropolis-fonts.css", "css/footer.css"]
+    includes:
+      after_body: insert-logo.html
+# Para exportar em PDF: pagedown::chrome_print("docs/index.html")
+---
+layout: true
+  
+<div class="my-footer"><span>
+
+Twitter: <a href='https://twitter.com/hsvab'>@hsvab</a> | <a href='mailto:hsvab@hsvab.eng.br'>hsvab@hsvab.eng.br</a> | <a href='https://www.linkedin.com/in/hsvab/'> LinkedIn </a> | Apresentação em: <a href='http://bit.ly/milz2rday'> bit.ly/milz2rday </a>
+
+
+</span></div> 
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center", message=FALSE, warning=FALSE)
+
+library(tidyverse)
+```
+
+---
+class: 
+
+# Haydée Svab
+
+### **Cientista de dados e pesquisadora <center> em mobilidade urbana e cidades inteligentes</center>**
+- Cursando especialização em Ciência de Dados e Big Data (PUC-MG)
+- Mestre Engenharia e Planejamento de Transportes (USP)
+- Especialista em Democracia Participativa (UFMG)
+- Engenheira civil, com dupla formação em arquitetura (USP)
+- Co-fundadora da ASK-AR, consultoria em análise de dados e tecnologia, onde coordena projetos ligados a dados e à promoção de direitos humanos
+- Trabalhou no Metrô-SP por quase 10 anos
+- Atuou como consultora Banco Mundial (2019) e do BID (2020)
+- **Co-fundadora e co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) `r emo::ji("purple_heart")`**
+- Co-fundadora dos grupos PoliGen (Grupo de Estudos de Gênero da Poli-USP) e do PoliGNU (Grupo de Estudos de Software Livre da Poli-USP)
+- Secretária da Subcomissão de Infraestruturas da ABNT / CEE-268 – Comissão Especial de Estudos em Cidades e Comunidades Sustentáveis
+
+
+---
+class: 
+
+# Referencial Teórico
+
+```{r out.width="65%"}
+knitr::include_graphics("img/educador-educando.jpg")
+```
+
+> *"Se estivesse claro para nós que foi aprendendo que percebemos ser possível ensinar, teríamos entendido com facilidade a importância das experiências informais nas ruas, nas praças, no trabalho, nas salas de aula das escolas, nos pátios dos recreios, em que variados gestos de discentes, de pessoal administrativo, de pessoal docente se cruzam, cheios de significação."*
+> 
+> (Freire, Paulo. "A Educação na Cidade" - São Paulo: Cortez Editora, 1991)
+
+
+---
+class: 
+
+# Referencial Teórico
+
+###  <center>Pedagogia da autonomia, de Paulo Freire</center>
+
+
+```{r out.width="55%"}
+knitr::include_graphics("img/relacao-dialogica.jpg")
+```
+
+--
+
+##### Capítulo 1 - Não há docência sem discência
+
+--
+
+##### Capítulo 2 - Ensinar não é transferir conhecimento
+
+--
+
+##### Capítulo 3 - Ensinar é uma especificidade humana
+
+
+---
+class:  
+
+# O que é o R-Ladies?
+
+
+```{r out.width="30%"}
+knitr::include_graphics("img/rainbow.png")
+```
+
+R-Ladies é uma organização mundial que promove a diversidade de gênero na comunidade da linguagem R e se estrutura **localmente em capítulos**.
+
+--
+
+> **"Ensinar exige o reconhecimento e a assunção da identidade cultural"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.41)
+
+
+---
+class:
+
+# Missão
+
+Como uma iniciativa de diversidade, <br>
+a missão das R-Ladies é alcançar uma representação proporcional de pessoas de gêneros hoje sub-representados na comunidade R, incentivando, inspirando e capacitando-as.
+
+--
+
+## Para quem?
+
+Nosso principal público-alvo são as pessoas que se identificam com o gênero feminino, portanto, mulheres cis, mulheres trans, bem como pessoas não-binárias e queer.
+
+--
+
+## Como?
+
+Através de atividades desenvolvidas em um **ambiente seguro e amigável**.
+
+--
+
+> **"Ensinar exige segurança, competência profissional e generosidade"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.91)
+
+
+---
+class:   
+
+# Código de conduta
+
+O R-Ladies dedica-se a proporcionar uma experiência livre de assédio <br>
+para todas as pessoas participantes, desta forma, não é tolerada nenhuma forma de assédio.
+O código de conduta aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline.
+[Código de conduta - R-Ladies](https://github.com/rladies/.github/blob/master/CODE_OF_CONDUCT.md#portuguese)
+
+```{r echo=FALSE, out.width="15%", fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/xT1R9V6Xv5yZhsLdyE/giphy.gif")
+```
+--
+
+> **"Ensinar exige estética e ética"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.32)
+
+
+---
+class:   
+
+# Como o R-Ladies começou?
+```{r echo=FALSE, fig.align='center', out.width="20%"}
+knitr::include_graphics("https://raw.githubusercontent.com/beatrizmilz/IV-SER-RLadies/master/docs/img/gabriela.jpeg")
+```
+
+**[Gabriela de Queiroz](https://github.com/gdequeiroz)** fundou o R-Ladies no dia **1 de outubro de 2012**. Ela queria retribuir à comunidade depois de ir a vários encontros e aprender muito de graça. O primeiro encontro R-Ladies foi realizado em ** San Francisco, Califórnia (Estados Unidos) **. Nos anos seguintes, mais capítulos do R-Ladies começaram em todo o mundo.
+
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/history/)
+
+--
+
+> **"Ensinar exige a convicção de que a mudança é possível"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.76)
+
+
+---
+class:
+
+# R-Ladies - Capítulos no mundo
+
+<br>
+<br>
+```{r echo=FALSE, out.width="85%"}
+knitr::include_graphics("img/r-ladies-community.PNG")
+```
+
+Atualizado em: Maio/2021. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+
+
+---
+class:   
+
+# Crescimento da R-Ladies no mundo
+
+<br>
+<br>
+```{r echo=FALSE, fig.align='center', out.width="170%"}
+knitr::include_graphics("img/cumulative-growth-of-chapters.png")
+```
+
+Atualizado em: Maio/2021. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html)
+
+--
+
+> **"Ensinar exige consciência do inacabamento"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.50)
+
+
+---
+class: 
+
+# R-Ladies no Brasil
+
+```{r eval=FALSE, include=FALSE}
+url <- "https://benubah.github.io/r-community-explorer/data/rladies.csv"
+download.file(url, "data/rladies.csv", method = "curl")
+```
+
+```{r}
+rladies <- readr::read_csv("data/rladies.csv")
+```
+
+```{r}
+library(knitr)
+library(kableExtra)
+```
+
+```{r echo=FALSE}
+rladies %>%
+  dplyr::arrange(desc(members)) %>%
+  dplyr::filter(country == "Brazil") %>%
+  dplyr::filter(status == "Active") %>%
+  dplyr::select(-X1,-city,-region,-fullurl,-country, -created) %>%
+  knitr::kable() %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = TRUE) %>%
+  kableExtra::scroll_box(width = "100%", height = "85%")
+```
+Atualizado em: `r  format(Sys.time(), '%B de %Y')`. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+
+
+---
+class: 
+
+# R-Ladies em São Paulo
+
+```{r out.width="65%"}
+knitr::include_graphics("img/1meetupsp.jpeg")
+```
+- **Primeiro encontro R-Ladies São Paulo ** - Agosto/2018
+
+- **~1200 participantes** - Maio/2021 
+
+
+---
+class:
+
+# Objetivo
+
+
+Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, **quem tiver interesse na linguagem será bem-vinde**, independente do nível de conhecimento. 
+
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/), [Meetup R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/)
+
+
+```{r echo=FALSE, fig.align='center', out.width="25%"}
+knitr::include_graphics("https://media.giphy.com/media/H4DjXQXamtTiIuCcRU/giphy.gif")
+```
+
+--
+
+> **"Ensinar exige curiosidade"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.84)
+
+
+---
+class: 
+# Atividades
+
+- Já realizamos 23 encontros, incluindo:
+  - Meetups, 
+  - Workshops, 
+  - Datathons 
+  
+**+ mentorias e grupo de estudos (em 2021)**
+
+```{r out.width="75%"}
+knitr::include_graphics("img/foto_loggi.jpeg")
+```
+
+---
+class: 
+
+# Atividades - ferramentas
+<br>
+
+## Pacotes
+
+- Conhecendo o `tidyverse` e os pacotes `dplyr`, `ggplot2`, `rmarkdown`
+- Trabalhando com strings com `stringr`
+- Apresentações com `xaringan`
+- Programação funcional com `purrr`
+- Usando o GitHub através do RStudio com o pacote `usethis`
+- Entre outros :)
+
+```{r out.width="12%", fig.align = "default"}
+knitr::include_graphics(c("img/rlogos/hex-tidyverse.jpg","img/rlogos/hex-dplyr.png","img/rlogos/hex-stringr.png", "img/rlogos/hex-ggplot2.png", "img/rlogos/hex-purrr.jpg", "img/rlogos/hex-rmarkdown.png", "img/rlogos/hex-xaringan.png", "img/rlogos/hex-usethis.png"))
+```
+
+
+---
+class:
+
+# Atividades - cases
+
+.pull-left[
+- 4º MeetUp R-Ladies SP (Dez/2018) <br>
+**Dados Abertos com R - Primeiros Passos**
+
+```{r out.width="90%"}
+knitr::include_graphics("img/explorando-dados-abertos-1.jpeg")
+```
+]
+
+.pull-right[
+- Com bases de dados do IPEA trabalhamos microdados e elaboramos gráficos simples para a análise de problemas reais
+
+```{r out.width="90%"}
+knitr::include_graphics("img/explorando-dados-abertos-2.jpeg")
+```
+]
+
+--
+
+> **"Ensinar exige apreensão da realidade"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.68)
+
+
+---
+class:
+
+# Atividades - cases
+
+.pull-left[
+- 8º MeetUp R-Ladies SP (Abr/2019) <br>
+**Jornalismo de Dados: do básico à reportagem**
+
+```{r out.width="90%"}
+knitr::include_graphics("img/jornalismo-dados-1.jpeg")
+```
+]
+
+.pull-right[
+- Como construir uma narrativa e uma reportagem a partir de bases de dados eleitorais
+
+```{r out.width="90%"}
+knitr::include_graphics("img/jornalismo-dados-2.jpeg")
+```
+]
+
+--
+
+> **"Ensinar exige compreender que a educação é uma forma de intervenção no mundo"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.98)
+
+
+---
+class:
+
+# Atividades - cases
+
+.pull-left[
+- 10º MeetUp R-Ladies SP (Jun/2019)  <br>
+**Cases de DataViz com R**
+
+```{r out.width="60%"}
+knitr::include_graphics("img/data-viz-1.jpeg")
+```
+]
+
+.pull-right[
+- Vimos noções de dataviz e exemplos concretos com dados econômicos e de transporte
+
+```{r out.width="90%"}
+knitr::include_graphics("img/data-viz-2.jpeg")
+```
+]
+
+--
+
+> **"Ensinar exige reflexão crítica sobre a prática"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.38)
+
+
+---
+class:
+
+# Atividades - cases
+
+.pull-left[
+- 14º MeetUp R-Ladies SP (Out/2019)  <br>
+**Machine Learning** - Aprendizado Supervisionado e não Supervisionado
+
+```{r out.width="85%"}
+knitr::include_graphics("img/machine-learning.jpeg")
+```
+]
+
+.pull-right[
+- MeetUp Online (Mai/2021)  <br>
+**Tidymodels: Estruturando o processo de Machine Learning** - preparação de dados, calibração e comparação de modelos através da aplicação em um problema de classificação
+
+```{r out.width="85%"}
+knitr::include_graphics("img/tidymodels.png")
+```
+]
+
+--
+
+> **"Ensinar exige pesquisa"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.29)
+
+
+---
+class: 
+
+# Atividades com outros capítulos
+
+.pull-left[
+- Workshop na R-Ladies Niterói (Maio/2019).
+
+```{r out.width="100%"}
+knitr::include_graphics("img/rladiesniteroi.jpeg")
+```
+]
+
+.pull-right[
+- Palestra na R-Ladies Recife (Setembro/2019).
+
+```{r out.width="100%"}
+knitr::include_graphics("img/rladiesrecife.PNG")
+```
+]
+
+
+---
+class: 
+
+# Colaborações
+
+- Também colaboramos em outros projetos:
+  - Aulas, Workshops...
+  - Sempre abertas para a comunidade. 
+
+Ex: [14ª aMostra Estatística 2019 - IME/USP](https://www.ime.usp.br/~amostra/) - 2 Workshops oferecidos pelas R-Ladies
+
+```{r out.width="55%"}
+knitr::include_graphics("img/ime-datavis.jpg")
+```
+
+---
+class:   
+
+# Formação de redes
+
+## Comunidades ligadas à linguagem R
+<br> 
+```{r echo=FALSE, fig.align='default', out.width="33%"}
+knitr::include_graphics(c(
+  "img/hex-carpentries.svg",
+  "img/rainbow.png",
+  "img/satrdaysp.png"
+    
+  #"img/TheCarpentries.svg"
+  
+))
+```
+
+
+---
+class:  
+
+# The Carpentries
+
+- **Visão**: Ser a **comunidade inclusiva** líder em ensino de dados e habilidades de programação.
+
+- **Missão**: A Carpentries desenvolve capacidade global em dados essenciais e habilidades computacionais para conduzir pesquisas eficientes, abertas e reproduzíveis. Treinamos e promovemos uma **comunidade ativa, inclusiva e diversificada** de alunos e instrutores que promove e modela a importância do software e dos dados na pesquisa. Colaboramos no desenvolvimento de lições abertas e entregamos essas lições usando práticas de ensino baseadas em evidências. Focamos nas pessoas que conduzem e apoiam pesquisas.
+
+- Workshops realizados por instrutores/as que recebem um treinamento e são certificados.
+
+- Tem um [Código de conduta](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html), sempre sendo discutido e aprimorado!
+
+Fonte: https://carpentries.org/about/
+
+
+---
+class:  
+
+# The Carpentries e R
+
+
+.pull-left[
+<br>
+```{r echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics(c("img/dc.svg", "img/swc.svg", "img/lc.svg"))
+```
+
+- Workshops desenvolvidos pela comunidade!
+]
+
+.pull-right[
+
+
+- **Data Carpentry**
+
+- [Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/)
+
+- [Introduction to R for Geospatial Data](https://datacarpentry.org/r-intro-geospatial)
+
+- [Introduction to Geospatial Raster and Vector Data with R](https://datacarpentry.org/r-raster-vector-geospatial)
+
+- **Software Carpentry**
+
+- [Programming with R](http://swcarpentry.github.io/r-novice-inflammation)
+
+- [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder)
+
+- **Library Carpentry**
+
+- [Introduction to R](https://librarycarpentry.org/lc-r/)
+
+]
+
+
+---
+class:  
+
+# The Carpentries - Mundo
+
+```{r echo=FALSE, out.width="80%", fig.align='center'}
+knitr::include_graphics("img/instrutores-mundo.PNG")
+```
+
+Fonte: https://carpentries.org/instructors-map/
+
+---
+class:  
+
+# The Carpentries - Brasil
+
+```{r echo=FALSE, out.width="80%", fig.align='center'}
+knitr::include_graphics("img/instrutores-br.PNG")
+```
+
+Fonte: https://carpentries.org/instructors-map/
+
+
+---
+class: 
+
+# The Carpentries
+
+## Desafios para a comunidade BR
+
+
+- Treinamento de instrutores/as é em inglês
+
+- Poucos instrutores/instrutoras certificados no Brasil
+
+- Material dos workshops estão em inglês 
+
+
+```{r echo=FALSE, out.width="40%", fig.align='center'}
+knitr::include_graphics("https://media0.giphy.com/media/QxZ0nbcVgMlPlnfZos/giphy-downsized.gif")
+```
+
+
+```{r eval=FALSE, include=FALSE}
++ Instrutores - + Workshops, + Equipe para traduzir, eventualmente equipe de treinamento de instrutores em português
+```
+
+
+---
+class: 
+
+# satRday
+
+.pull-left[
+
+
+</br>
+<img src ="img/placeholder.png" width = "90%"></img>
+
+]
+
+.pull-right[
+
++ O satRday é uma conferência focada em R, __a principal linguagem de código aberto__ de Ciência de Dados.
+
++ satRday é um __evento internacional__ que foi lançado em 2016.
+
++ O satRday foi patrocinado pela __RConsortium__, um projeto de código aberto da Linux Foundation que dá suporte à comunidade internacional de R.
+
++ Os eventos são sempre organizados com o envolvimento da comunidade local.
+]
+
+
+---
+class:
+
+# satRday
+
+## Código de conduta
+
+- O satRdays tem como objetivo **proporcionar uma experiência de conferência livre de assédio e inclusiva para todos as pessoas participantes**, independente, mas não limitado a, gênero, orientação sexual, deficiência, aparência física, idade, raça/etnia, posição social, religião ou afiliação política. 
+
+
+- Imagens e insinuações sexuais não são apropriadas em nenhum local da conferência, incluindo apresentações. 
+
+
+- Qualquer pessoa que viole estas regras pode ser advertida ou expulsa da conferência (sem reembolso), conforme critérios dos organizadores da conferência. 
+
+
+Para saber mais: https://saopaulo2019.satrdays.org/codigodeconduta/
+
+
+---
+class: 
+
+# satRday SP 2019   
+
+- **Diversidade**:
+  - Parte dos ingressos foram destinados à pessoas de grupos sub-representados na comunidade de R, e também para estudantes.
+
+
+```{r echo=FALSE, out.width="40%", fig.align='center'}
+knitr::include_graphics("img/satrdayspfinal.jpg")
+```
+
+> **"Ensinar exige risco, aceitação do novo e rejeição a qualquer forma de discriminação"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.35)
+
+
+---
+class: center
+
+# satRday SP 2019  
+
+## Equipe organizadora
+
+```{r echo=FALSE, fig.align='default', out.width="16%"}
+knitr::include_graphics(c("img/team/adrianareis.jpg", 
+                          "img/team/angelica.jpg",
+                          "img/team/beamilz.jpg",
+                          "img/team/brunaw.jpg",
+                          "img/team/clente.jpg",
+                          "img/team/danielfalbel.jpg",
+                          "img/team/fernandafortti.jpg", 
+                          "img/team/gabrielacaesar.jpg",
+                          "img/team/gabrielz.jpg",
+                          "img/team/josejesus.jpg",
+                          "img/team/juliotrecenti.jpg",
+                          "img/team/leticiathomaz.jpg",
+                          "img/team/mariguilardi.jpg",
+                          "img/team/nathdemetrio.jpg",
+                          "img/team/renatahirota.jpg",
+                          "img/team/william.jpg"))
+```
+
+
+---
+class: 
+
+# Conclusão
+
+- The increasing popularity of the R-Ladies São Paulo shows us how important it is to support it, 
+
+- It can be the key to motivate the creation of other chapters in Brazil, 
+
+- It helps to increase the strength of the Brazilian R community and the inclusion of underrepresented groups. 
+
+- Importância do código de conduta!
+
+## Pontos importantes:
+<BR>
+- O grupo oferece um ambiente seguro para pessoas interessadas em `R`, e todas as pessoas devem seguir o código de conduta: [https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
+
+- As palestras e conteúdos apresentados são disponibilizados gratuitamente no GitHub: 
+   - [https://github.com/rladies/meetup-presentations_sao-paulo](https://github.com/rladies/meetup-presentations_sao-paulo)
+
+- **Todas as atividades são gratuitas**
+
+
+> **"Formar é muito mais do que puramente treinar o/a educando/a no desempenho de destrezas"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.14)
+
+## Convites
+
+- R-Ladies e satRday - Organizar na sua cidade?
+
+- The Carpentries - se inscreva na capacitação para instrutor(a)
+
+- Latin-R - organização -> site e divulgação/redes sociais em português
+
+
+---
+class:   
+
+# Como saber mais? 
+
+## R-Ladies
+  - Website RLadies Global: [https://rladies.org/](https://rladies.org/)
+  - Twitter: [@RLadiesGlobal](https://twitter.com/rladiesglobal), [@RLadiesSaoPaulo](https://twitter.com/RLadiesSaoPaulo)
+  - Instagram: [@RLadiesSaoPaulo](http://instagram.com/RLadiesSaoPaulo)
+  - Facebook: [@RLadiesSaoPaulo](http://facebook.com/RLadiesSaoPaulo)
+  - MeetUp: [https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
+  - Github: [https://github.com/rladies/meetup-presentations_sao-paulo](https://github.com/rladies/meetup-presentations_sao-paulo)
+  
+  <br>
+  
+  - **Não tem capítulo na sua cidade e quer iniciar um?**
+  
+  <br>
+  
+  **Saiba como em <a href="https://rladies.org/about-us/help/"> R-Ladies - How do get involved </a>** 
+
+
+---
+class:   
+
+# Agradecimentos
+
+```{r echo=FALSE, fig.align='center', out.width="40%"}
+knitr::include_graphics("https://media1.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif")
+```
+
+**<center>Beatriz Milz & toda a comunidade RLadies</center>**
+
+- **Contato**:
+
+  - Email: <a href="mailto:hsvab@hsvab.eng.br">hsvab@hsvab.eng.br</a>
+  - Github: <a href="https://github.com/hsvab">@hsvab</a>
+  - GitLab: <a href="https://gitlab.com/hsvab">@hsvab</a>
+  - Twitter: <a href="https://twitter.com/hsvab">@hsvab</a> 
+  - Linkedin: <a href="https://www.linkedin.com/in/hsvab/">Haydée Svab</a>
+  - Instagram: <a href="https://www.instagram.com/haydeesvab/">Haydée Svab</a>
+
+
+- Apresentação feita com [Xaringan](https://github.com/yihui/xaringan), com o tema `metropolis` modificado.
+
+
+---
+class:   
+
+```{r echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("img/allisonhorst/commuitysuport.jpg")
+```
+
+<center><p>Imagem por <a href='https://twitter.com/allison_horst' target=_blank>@allison_horst</a></p></center>

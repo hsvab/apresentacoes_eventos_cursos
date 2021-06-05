@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>R-Ladies São Paulo  um espaço de ensino-aprendizagem</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+    <script src="libs/anchor-sections/anchor-sections.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/metropolis.css" type="text/css" />
+    <link rel="stylesheet" href="css/metropolis-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/footer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# R-Ladies São Paulo<br> um espaço de ensino-aprendizagem
+## <center>
+<img src= 'img/allisonhorst/community1.jpg' width = '20%' alt='Author: Allison Horst'></br>
+<p>
+Imagem por <a href='https://twitter.com/allison_horst' target=_blank><span class="citation">@allison_horst</span></a>
+</p>
+</center>
+### <center>
+Haydee Svab<br> 09/06/2021
+</center>
+
+---
+
+layout: true
+  
+&lt;div class="my-footer"&gt;&lt;span&gt;
+
+Twitter: &lt;a href='https://twitter.com/hsvab'&gt;@hsvab&lt;/a&gt; | &lt;a href='mailto:hsvab@hsvab.eng.br'&gt;hsvab@hsvab.eng.br&lt;/a&gt; | &lt;a href='https://www.linkedin.com/in/hsvab/'&gt; LinkedIn &lt;/a&gt; | Apresentação em: &lt;a href='http://bit.ly/milz2rday'&gt; bit.ly/milz2rday &lt;/a&gt;
+
+
+&lt;/span&gt;&lt;/div&gt; 
+
+
+
+---
+class: 
+
+# Haydée Svab
+
+### **Cientista de dados e pesquisadora &lt;center&gt; em mobilidade urbana e cidades inteligentes&lt;/center&gt;**
+- Cursando especialização em Ciência de Dados e Big Data (PUC-MG)
+- Mestre Engenharia e Planejamento de Transportes (USP)
+- Especialista em Democracia Participativa (UFMG)
+- Engenheira civil, com dupla formação em arquitetura (USP)
+- Co-fundadora da ASK-AR, consultoria em análise de dados e tecnologia, onde coordena projetos ligados a dados e à promoção de direitos humanos
+- Trabalhou no Metrô-SP por quase 10 anos
+- Atuou como consultora Banco Mundial (2019) e do BID (2020)
+- **Co-fundadora e co-organizadora - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) 💜**
+- Co-fundadora dos grupos PoliGen (Grupo de Estudos de Gênero da Poli-USP) e do PoliGNU (Grupo de Estudos de Software Livre da Poli-USP)
+- Secretária da Subcomissão de Infraestruturas da ABNT / CEE-268 – Comissão Especial de Estudos em Cidades e Comunidades Sustentáveis
+
+
+---
+class: 
+
+# Referencial Teórico
+
+&lt;img src="img/educador-educando.jpg" width="65%" style="display: block; margin: auto;" /&gt;
+
+&gt; *"Se estivesse claro para nós que foi aprendendo que percebemos ser possível ensinar, teríamos entendido com facilidade a importância das experiências informais nas ruas, nas praças, no trabalho, nas salas de aula das escolas, nos pátios dos recreios, em que variados gestos de discentes, de pessoal administrativo, de pessoal docente se cruzam, cheios de significação."*
+&gt; 
+&gt; (Freire, Paulo. "A Educação na Cidade" - São Paulo: Cortez Editora, 1991)
+
+
+---
+class: 
+
+# Referencial Teórico
+
+###  &lt;center&gt;Pedagogia da autonomia, de Paulo Freire&lt;/center&gt;
+
+
+&lt;img src="img/relacao-dialogica.jpg" width="55%" style="display: block; margin: auto;" /&gt;
+
+--
+
+##### Capítulo 1 - Não há docência sem discência
+
+--
+
+##### Capítulo 2 - Ensinar não é transferir conhecimento
+
+--
+
+##### Capítulo 3 - Ensinar é uma especificidade humana
+
+
+---
+class:  
+
+# O que é o R-Ladies?
+
+
+&lt;img src="img/rainbow.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+R-Ladies é uma organização mundial que promove a diversidade de gênero na comunidade da linguagem R e se estrutura **localmente em capítulos**.
+
+--
+
+&gt; **"Ensinar exige o reconhecimento e a assunção da identidade cultural"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.41)
+
+
+---
+class:
+
+# Missão
+
+Como uma iniciativa de diversidade, &lt;br&gt;
+a missão das R-Ladies é alcançar uma representação proporcional de pessoas de gêneros hoje sub-representados na comunidade R, incentivando, inspirando e capacitando-as.
+
+--
+
+## Para quem?
+
+Nosso principal público-alvo são as pessoas que se identificam com o gênero feminino, portanto, mulheres cis, mulheres trans, bem como pessoas não-binárias e queer.
+
+--
+
+## Como?
+
+Através de atividades desenvolvidas em um **ambiente seguro e amigável**.
+
+--
+
+&gt; **"Ensinar exige segurança, competência profissional e generosidade"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.91)
+
+
+---
+class:   
+
+# Código de conduta
+
+O R-Ladies dedica-se a proporcionar uma experiência livre de assédio &lt;br&gt;
+para todas as pessoas participantes, desta forma, não é tolerada nenhuma forma de assédio.
+O código de conduta aplica-se a todos os espaços R-Ladies, incluindo: meetups, Twitter, Slack, listas de discussão, tanto online como offline.
+[Código de conduta - R-Ladies](https://github.com/rladies/.github/blob/master/CODE_OF_CONDUCT.md#portuguese)
+
+&lt;img src="https://media.giphy.com/media/xT1R9V6Xv5yZhsLdyE/giphy.gif" width="15%" style="display: block; margin: auto;" /&gt;
+--
+
+&gt; **"Ensinar exige estética e ética"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.32)
+
+
+---
+class:   
+
+# Como o R-Ladies começou?
+&lt;img src="https://raw.githubusercontent.com/beatrizmilz/IV-SER-RLadies/master/docs/img/gabriela.jpeg" width="20%" style="display: block; margin: auto;" /&gt;
+
+**[Gabriela de Queiroz](https://github.com/gdequeiroz)** fundou o R-Ladies no dia **1 de outubro de 2012**. Ela queria retribuir à comunidade depois de ir a vários encontros e aprender muito de graça. O primeiro encontro R-Ladies foi realizado em ** San Francisco, Califórnia (Estados Unidos) **. Nos anos seguintes, mais capítulos do R-Ladies começaram em todo o mundo.
+
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/history/)
+
+--
+
+&gt; **"Ensinar exige a convicção de que a mudança é possível"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.76)
+
+
+---
+class:
+
+# R-Ladies - Capítulos no mundo
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="img/r-ladies-community.PNG" width="85%" style="display: block; margin: auto;" /&gt;
+
+Atualizado em: Maio/2021. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+
+
+---
+class:   
+
+# Crescimento da R-Ladies no mundo
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="img/cumulative-growth-of-chapters.png" width="170%" style="display: block; margin: auto;" /&gt;
+
+Atualizado em: Maio/2021. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html)
+
+--
+
+&gt; **"Ensinar exige consciência do inacabamento"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.50)
+
+
+---
+class: 
+
+# R-Ladies no Brasil
+
+
+
+
+
+
+
+&lt;div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:85%; overflow-x: scroll; width:100%; "&gt;&lt;table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; name &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; members &lt;/th&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; status &lt;/th&gt;
+   &lt;th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"&gt; last_event &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; past_events &lt;/th&gt;
+   &lt;th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"&gt; upcoming_events &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies São Paulo &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1271 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2021-05-08 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies Belo Horizonte &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 869 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2021-05-26 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 18 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies Natal &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 405 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2021-05-21 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 8 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies Goiânia &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 388 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2021-05-29 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies Salvador &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 241 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2020-12-12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies Vitória &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 201 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2021-04-28 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies Ribeirão Preto &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 123 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2020-11-30 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies Fortaleza &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 108 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2020-12-12 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; R-Ladies Lavras &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 57 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Active &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2021-05-06 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+Atualizado em: junho de 2021. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html) 
+
+
+---
+class: 
+
+# R-Ladies em São Paulo
+
+&lt;img src="img/1meetupsp.jpeg" width="65%" style="display: block; margin: auto;" /&gt;
+- **Primeiro encontro R-Ladies São Paulo ** - Agosto/2018
+
+- **~1200 participantes** - Maio/2021 
+
+
+---
+class:
+
+# Objetivo
+
+
+Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, **quem tiver interesse na linguagem será bem-vinde**, independente do nível de conhecimento. 
+
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/), [Meetup R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/)
+
+
+&lt;img src="https://media.giphy.com/media/H4DjXQXamtTiIuCcRU/giphy.gif" width="25%" style="display: block; margin: auto;" /&gt;
+
+--
+
+&gt; **"Ensinar exige curiosidade"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.84)
+
+
+---
+class: 
+# Atividades
+
+- Já realizamos 23 encontros, incluindo:
+  - Meetups, 
+  - Workshops, 
+  - Datathons 
+  
+**+ mentorias e grupo de estudos (em 2021)**
+
+&lt;img src="img/foto_loggi.jpeg" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+class: 
+
+# Atividades - ferramentas
+&lt;br&gt;
+
+## Pacotes
+
+- Conhecendo o `tidyverse` e os pacotes `dplyr`, `ggplot2`, `rmarkdown`
+- Trabalhando com strings com `stringr`
+- Apresentações com `xaringan`
+- Programação funcional com `purrr`
+- Usando o GitHub através do RStudio com o pacote `usethis`
+- Entre outros :)
+
+&lt;img src="img/rlogos/hex-tidyverse.jpg" width="12%" /&gt;&lt;img src="img/rlogos/hex-dplyr.png" width="12%" /&gt;&lt;img src="img/rlogos/hex-stringr.png" width="12%" /&gt;&lt;img src="img/rlogos/hex-ggplot2.png" width="12%" /&gt;&lt;img src="img/rlogos/hex-purrr.jpg" width="12%" /&gt;&lt;img src="img/rlogos/hex-rmarkdown.png" width="12%" /&gt;&lt;img src="img/rlogos/hex-xaringan.png" width="12%" /&gt;&lt;img src="img/rlogos/hex-usethis.png" width="12%" /&gt;
+
+
+---
+class:
+
+# Atividades - cases
+
+.pull-left[
+- 4º MeetUp R-Ladies SP (Dez/2018) &lt;br&gt;
+**Dados Abertos com R - Primeiros Passos**
+
+&lt;img src="img/explorando-dados-abertos-1.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Com bases de dados do IPEA trabalhamos microdados e elaboramos gráficos simples para a análise de problemas reais
+
+&lt;img src="img/explorando-dados-abertos-2.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+&gt; **"Ensinar exige apreensão da realidade"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.68)
+
+
+---
+class:
+
+# Atividades - cases
+
+.pull-left[
+- 8º MeetUp R-Ladies SP (Abr/2019) &lt;br&gt;
+**Jornalismo de Dados: do básico à reportagem**
+
+&lt;img src="img/jornalismo-dados-1.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Como construir uma narrativa e uma reportagem a partir de bases de dados eleitorais
+
+&lt;img src="img/jornalismo-dados-2.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+&gt; **"Ensinar exige compreender que a educação é uma forma de intervenção no mundo"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.98)
+
+
+---
+class:
+
+# Atividades - cases
+
+.pull-left[
+- 10º MeetUp R-Ladies SP (Jun/2019)  &lt;br&gt;
+**Cases de DataViz com R**
+
+&lt;img src="img/data-viz-1.jpeg" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Vimos noções de dataviz e exemplos concretos com dados econômicos e de transporte
+
+&lt;img src="img/data-viz-2.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+&gt; **"Ensinar exige reflexão crítica sobre a prática"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.38)
+
+
+---
+class:
+
+# Atividades - cases
+
+.pull-left[
+- 14º MeetUp R-Ladies SP (Out/2019)  &lt;br&gt;
+**Machine Learning** - Aprendizado Supervisionado e não Supervisionado
+
+&lt;img src="img/machine-learning.jpeg" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- MeetUp Online (Mai/2021)  &lt;br&gt;
+**Tidymodels: Estruturando o processo de Machine Learning** - preparação de dados, calibração e comparação de modelos através da aplicação em um problema de classificação
+
+&lt;img src="img/tidymodels.png" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+&gt; **"Ensinar exige pesquisa"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.29)
+
+
+---
+class: 
+
+# Atividades com outros capítulos
+
+.pull-left[
+- Workshop na R-Ladies Niterói (Maio/2019).
+
+&lt;img src="img/rladiesniteroi.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- Palestra na R-Ladies Recife (Setembro/2019).
+
+&lt;img src="img/rladiesrecife.PNG" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+class: 
+
+# Colaborações
+
+- Também colaboramos em outros projetos:
+  - Aulas, Workshops...
+  - Sempre abertas para a comunidade. 
+
+Ex: [14ª aMostra Estatística 2019 - IME/USP](https://www.ime.usp.br/~amostra/) - 2 Workshops oferecidos pelas R-Ladies
+
+&lt;img src="img/ime-datavis.jpg" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+class:   
+
+# Formação de redes
+
+## Comunidades ligadas à linguagem R
+&lt;br&gt; 
+&lt;img src="img/hex-carpentries.svg" width="33%" /&gt;&lt;img src="img/rainbow.png" width="33%" /&gt;&lt;img src="img/satrdaysp.png" width="33%" /&gt;
+
+
+---
+class:  
+
+# The Carpentries
+
+- **Visão**: Ser a **comunidade inclusiva** líder em ensino de dados e habilidades de programação.
+
+- **Missão**: A Carpentries desenvolve capacidade global em dados essenciais e habilidades computacionais para conduzir pesquisas eficientes, abertas e reproduzíveis. Treinamos e promovemos uma **comunidade ativa, inclusiva e diversificada** de alunos e instrutores que promove e modela a importância do software e dos dados na pesquisa. Colaboramos no desenvolvimento de lições abertas e entregamos essas lições usando práticas de ensino baseadas em evidências. Focamos nas pessoas que conduzem e apoiam pesquisas.
+
+- Workshops realizados por instrutores/as que recebem um treinamento e são certificados.
+
+- Tem um [Código de conduta](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html), sempre sendo discutido e aprimorado!
+
+Fonte: https://carpentries.org/about/
+
+
+---
+class:  
+
+# The Carpentries e R
+
+
+.pull-left[
+&lt;br&gt;
+&lt;img src="img/dc.svg" width="50%" style="display: block; margin: auto;" /&gt;&lt;img src="img/swc.svg" width="50%" style="display: block; margin: auto;" /&gt;&lt;img src="img/lc.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+- Workshops desenvolvidos pela comunidade!
+]
+
+.pull-right[
+
+
+- **Data Carpentry**
+
+- [Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/)
+
+- [Introduction to R for Geospatial Data](https://datacarpentry.org/r-intro-geospatial)
+
+- [Introduction to Geospatial Raster and Vector Data with R](https://datacarpentry.org/r-raster-vector-geospatial)
+
+- **Software Carpentry**
+
+- [Programming with R](http://swcarpentry.github.io/r-novice-inflammation)
+
+- [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder)
+
+- **Library Carpentry**
+
+- [Introduction to R](https://librarycarpentry.org/lc-r/)
+
+]
+
+
+---
+class:  
+
+# The Carpentries - Mundo
+
+&lt;img src="img/instrutores-mundo.PNG" width="80%" style="display: block; margin: auto;" /&gt;
+
+Fonte: https://carpentries.org/instructors-map/
+
+---
+class:  
+
+# The Carpentries - Brasil
+
+&lt;img src="img/instrutores-br.PNG" width="80%" style="display: block; margin: auto;" /&gt;
+
+Fonte: https://carpentries.org/instructors-map/
+
+
+---
+class: 
+
+# The Carpentries
+
+## Desafios para a comunidade BR
+
+
+- Treinamento de instrutores/as é em inglês
+
+- Poucos instrutores/instrutoras certificados no Brasil
+
+- Material dos workshops estão em inglês 
+
+
+&lt;img src="https://media0.giphy.com/media/QxZ0nbcVgMlPlnfZos/giphy-downsized.gif" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+
+---
+class: 
+
+# satRday
+
+.pull-left[
+
+
+&lt;/br&gt;
+&lt;img src ="img/placeholder.png" width = "90%"&gt;&lt;/img&gt;
+
+]
+
+.pull-right[
+
++ O satRday é uma conferência focada em R, __a principal linguagem de código aberto__ de Ciência de Dados.
+
++ satRday é um __evento internacional__ que foi lançado em 2016.
+
++ O satRday foi patrocinado pela __RConsortium__, um projeto de código aberto da Linux Foundation que dá suporte à comunidade internacional de R.
+
++ Os eventos são sempre organizados com o envolvimento da comunidade local.
+]
+
+
+---
+class:
+
+# satRday
+
+## Código de conduta
+
+- O satRdays tem como objetivo **proporcionar uma experiência de conferência livre de assédio e inclusiva para todos as pessoas participantes**, independente, mas não limitado a, gênero, orientação sexual, deficiência, aparência física, idade, raça/etnia, posição social, religião ou afiliação política. 
+
+
+- Imagens e insinuações sexuais não são apropriadas em nenhum local da conferência, incluindo apresentações. 
+
+
+- Qualquer pessoa que viole estas regras pode ser advertida ou expulsa da conferência (sem reembolso), conforme critérios dos organizadores da conferência. 
+
+
+Para saber mais: https://saopaulo2019.satrdays.org/codigodeconduta/
+
+
+---
+class: 
+
+# satRday SP 2019   
+
+- **Diversidade**:
+  - Parte dos ingressos foram destinados à pessoas de grupos sub-representados na comunidade de R, e também para estudantes.
+
+
+&lt;img src="img/satrdayspfinal.jpg" width="40%" style="display: block; margin: auto;" /&gt;
+
+&gt; **"Ensinar exige risco, aceitação do novo e rejeição a qualquer forma de discriminação"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.35)
+
+
+---
+class: center
+
+# satRday SP 2019  
+
+## Equipe organizadora
+
+&lt;img src="img/team/adrianareis.jpg" width="16%" /&gt;&lt;img src="img/team/angelica.jpg" width="16%" /&gt;&lt;img src="img/team/beamilz.jpg" width="16%" /&gt;&lt;img src="img/team/brunaw.jpg" width="16%" /&gt;&lt;img src="img/team/clente.jpg" width="16%" /&gt;&lt;img src="img/team/danielfalbel.jpg" width="16%" /&gt;&lt;img src="img/team/fernandafortti.jpg" width="16%" /&gt;&lt;img src="img/team/gabrielacaesar.jpg" width="16%" /&gt;&lt;img src="img/team/gabrielz.jpg" width="16%" /&gt;&lt;img src="img/team/josejesus.jpg" width="16%" /&gt;&lt;img src="img/team/juliotrecenti.jpg" width="16%" /&gt;&lt;img src="img/team/leticiathomaz.jpg" width="16%" /&gt;&lt;img src="img/team/mariguilardi.jpg" width="16%" /&gt;&lt;img src="img/team/nathdemetrio.jpg" width="16%" /&gt;&lt;img src="img/team/renatahirota.jpg" width="16%" /&gt;&lt;img src="img/team/william.jpg" width="16%" /&gt;
+
+
+---
+class: 
+
+# Conclusão
+
+- The increasing popularity of the R-Ladies São Paulo shows us how important it is to support it, 
+
+- It can be the key to motivate the creation of other chapters in Brazil, 
+
+- It helps to increase the strength of the Brazilian R community and the inclusion of underrepresented groups. 
+
+- Importância do código de conduta!
+
+## Pontos importantes:
+&lt;BR&gt;
+- O grupo oferece um ambiente seguro para pessoas interessadas em `R`, e todas as pessoas devem seguir o código de conduta: [https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
+
+- As palestras e conteúdos apresentados são disponibilizados gratuitamente no GitHub: 
+   - [https://github.com/rladies/meetup-presentations_sao-paulo](https://github.com/rladies/meetup-presentations_sao-paulo)
+
+- **Todas as atividades são gratuitas**
+
+
+&gt; **"Formar é muito mais do que puramente treinar o/a educando/a no desempenho de destrezas"**
+&gt; 
+&gt; (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.14)
+
+## Convites
+
+- R-Ladies e satRday - Organizar na sua cidade?
+
+- The Carpentries - se inscreva na capacitação para instrutor(a)
+
+- Latin-R - organização -&gt; site e divulgação/redes sociais em português
+
+
+---
+class:   
+
+# Como saber mais? 
+
+## R-Ladies
+  - Website RLadies Global: [https://rladies.org/](https://rladies.org/)
+  - Twitter: [@RLadiesGlobal](https://twitter.com/rladiesglobal), [@RLadiesSaoPaulo](https://twitter.com/RLadiesSaoPaulo)
+  - Instagram: [@RLadiesSaoPaulo](http://instagram.com/RLadiesSaoPaulo)
+  - Facebook: [@RLadiesSaoPaulo](http://facebook.com/RLadiesSaoPaulo)
+  - MeetUp: [https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
+  - Github: [https://github.com/rladies/meetup-presentations_sao-paulo](https://github.com/rladies/meetup-presentations_sao-paulo)
+  
+  &lt;br&gt;
+  
+  - **Não tem capítulo na sua cidade e quer iniciar um?**
+  
+  &lt;br&gt;
+  
+  **Saiba como em &lt;a href="https://rladies.org/about-us/help/"&gt; R-Ladies - How do get involved &lt;/a&gt;** 
+
+
+---
+class:   
+
+# Agradecimentos
+
+&lt;img src="https://media1.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif" width="40%" style="display: block; margin: auto;" /&gt;
+
+**&lt;center&gt;Beatriz Milz &amp; toda a comunidade RLadies&lt;/center&gt;**
+
+- **Contato**:
+
+  - Email: &lt;a href="mailto:hsvab@hsvab.eng.br"&gt;hsvab@hsvab.eng.br&lt;/a&gt;
+  - Github: &lt;a href="https://github.com/hsvab"&gt;@hsvab&lt;/a&gt;
+  - GitLab: &lt;a href="https://gitlab.com/hsvab"&gt;@hsvab&lt;/a&gt;
+  - Twitter: &lt;a href="https://twitter.com/hsvab"&gt;@hsvab&lt;/a&gt; 
+  - Linkedin: &lt;a href="https://www.linkedin.com/in/hsvab/"&gt;Haydée Svab&lt;/a&gt;
+  - Instagram: &lt;a href="https://www.instagram.com/haydeesvab/"&gt;Haydée Svab&lt;/a&gt;
+
+
+- Apresentação feita com [Xaringan](https://github.com/yihui/xaringan), com o tema `metropolis` modificado.
+
+
+---
+class:   
+
+&lt;img src="img/allisonhorst/commuitysuport.jpg" width="65%" style="display: block; margin: auto;" /&gt;
+
+&lt;center&gt;&lt;p&gt;Imagem por &lt;a href='https://twitter.com/allison_horst' target=_blank&gt;@allison_horst&lt;/a&gt;&lt;/p&gt;&lt;/center&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<style>
+  .logo {
+    background-image: url(img/rainbow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 100px;
+    height: 128px;
+    z-index: 0;
+  }
+</style>
+  
+  <script>
+  document
+.querySelectorAll(
+  '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+  // ':not(.inverse)' +
+    ':not(.hide-logo)'
+)
+.forEach(el => {
+  el.innerHTML += '<div class="logo"></div>';
+});
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
