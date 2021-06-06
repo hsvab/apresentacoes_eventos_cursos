@@ -194,8 +194,6 @@ class:
 knitr::include_graphics("img/cumulative-growth-of-chapters.png")
 ```
 
-Atualizado em: Maio/2021. Fonte: [R Community Explorer](https://benubah.github.io/r-community-explorer/rladies.html)
-
 --
 
 > **"Ensinar exige consciência do inacabamento"**
@@ -425,7 +423,7 @@ knitr::include_graphics("img/tidymodels.png")
 ---
 class: 
 
-# Atividades com outros capítulos
+# Formação de rede - outros capítulos
 
 .pull-left[
 - Workshop na R-Ladies Niterói (Maio/2019).
@@ -443,21 +441,63 @@ knitr::include_graphics("img/rladiesrecife.PNG")
 ```
 ]
 
+--
+
+> **"Ensinar exige respeito aos saberes de educandos(as)"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.30)
+
 
 ---
 class: 
 
-# Colaborações
+# Formação de rede - outros capítulos
 
-- Também colaboramos em outros projetos:
-  - Aulas, Workshops...
-  - Sempre abertas para a comunidade. 
+.pull-left[
+- Palestra na R-Ladies Curitiba (Agosto/2020)
 
-Ex: [14ª aMostra Estatística 2019 - IME/USP](https://www.ime.usp.br/~amostra/) - 2 Workshops oferecidos pelas R-Ladies
+```{r out.width="100%"}
+knitr::include_graphics("img/2020-08-26-RLadies-curitiba.png")
+```
+]
 
-```{r out.width="55%"}
+.pull-right[
+- Palestra na R-Ladies Teresina (Junho/2021).
+
+```{r out.width="70%"}
+knitr::include_graphics("img/Rladies-teresina.jpg")
+```
+]
+
+
+---
+class: 
+
+# Outras colaborações
+
+.pull-left[
+- [14ª aMostra Estatística 2019 - IME/USP](https://www.ime.usp.br/~amostra/) - 2 Workshops oferecidos pelas R-Ladies
+
+
+```{r out.width="75%"}
 knitr::include_graphics("img/ime-datavis.jpg")
 ```
+]
+
+.pull-right[
+- [Curso-R entrevista Ana Carolina Moreno, Cecília do Lago e Renata Hirota](https://www.youtube.com/watch?v=yzbCmZYRqUI) (Abri/2021) - RLadies e jornalistas de dados.
+
+```{r out.width="85%"}
+knitr::include_graphics("img/jornalistas.png")
+```
+> *"Todo mundo precisa transformar os dados em história e ninguém faz isso melhor que jornalistas"*
+]
+
+--
+
+> **"Ensinar exige disponibilidade para o diálogo"**
+> 
+> (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.135)
 
 ---
 class:   
@@ -544,42 +584,6 @@ knitr::include_graphics("img/instrutores-mundo.PNG")
 
 Fonte: https://carpentries.org/instructors-map/
 
----
-class:  
-
-# The Carpentries - Brasil
-
-```{r echo=FALSE, out.width="80%", fig.align='center'}
-knitr::include_graphics("img/instrutores-br.PNG")
-```
-
-Fonte: https://carpentries.org/instructors-map/
-
-
----
-class: 
-
-# The Carpentries
-
-## Desafios para a comunidade BR
-
-
-- Treinamento de instrutores/as é em inglês
-
-- Poucos instrutores/instrutoras certificados no Brasil
-
-- Material dos workshops estão em inglês 
-
-
-```{r echo=FALSE, out.width="40%", fig.align='center'}
-knitr::include_graphics("https://media0.giphy.com/media/QxZ0nbcVgMlPlnfZos/giphy-downsized.gif")
-```
-
-
-```{r eval=FALSE, include=FALSE}
-+ Instrutores - + Workshops, + Equipe para traduzir, eventualmente equipe de treinamento de instrutores em português
-```
-
 
 ---
 class: 
@@ -644,66 +648,25 @@ knitr::include_graphics("img/satrdayspfinal.jpg")
 
 
 ---
-class: center
-
-# satRday SP 2019  
-
-## Equipe organizadora
-
-```{r echo=FALSE, fig.align='default', out.width="16%"}
-knitr::include_graphics(c("img/team/adrianareis.jpg", 
-                          "img/team/angelica.jpg",
-                          "img/team/beamilz.jpg",
-                          "img/team/brunaw.jpg",
-                          "img/team/clente.jpg",
-                          "img/team/danielfalbel.jpg",
-                          "img/team/fernandafortti.jpg", 
-                          "img/team/gabrielacaesar.jpg",
-                          "img/team/gabrielz.jpg",
-                          "img/team/josejesus.jpg",
-                          "img/team/juliotrecenti.jpg",
-                          "img/team/leticiathomaz.jpg",
-                          "img/team/mariguilardi.jpg",
-                          "img/team/nathdemetrio.jpg",
-                          "img/team/renatahirota.jpg",
-                          "img/team/william.jpg"))
-```
-
-
----
 class: 
 
-# Conclusão
+# Pontos importantes
 
-- The increasing popularity of the R-Ladies São Paulo shows us how important it is to support it, 
+- O grupo oferece um **ambiente seguro** para pessoas interessadas em `R` e há mecanismos que estabelecem claramente quais comportamentos não são tolerados como o [código de conduta](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
 
-- It can be the key to motivate the creation of other chapters in Brazil, 
+- **Todas as atividades são gratuitas**: as palestras e conteúdos apresentados são disponibilizados no [GitHub](https://github.com/rladies/meetup-presentations_sao-paulo) ou no [YouTube](https://www.youtube.com/channel/UCU3ePTnZQurDkYgPK61DAOw)
 
-- It helps to increase the strength of the Brazilian R community and the inclusion of underrepresented groups. 
+- O crescimento da comunidade R-Ladies São Paulo mostra o quanto **é importante oferecer suporte e formar uma rede**
 
-- Importância do código de conduta!
+- A valorização de espaços de ensino-aprendizagem não formais tem **efeito positivo na auto-estima e na qualificação profissional das pessoas participantes**
 
-## Pontos importantes:
-<BR>
-- O grupo oferece um ambiente seguro para pessoas interessadas em `R`, e todas as pessoas devem seguir o código de conduta: [https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
+- Grupos como RLadies ajudam a fortalecer a comunidade R em si e também a promover a inclusão de grupos subrepresentados
 
-- As palestras e conteúdos apresentados são disponibilizados gratuitamente no GitHub: 
-   - [https://github.com/rladies/meetup-presentations_sao-paulo](https://github.com/rladies/meetup-presentations_sao-paulo)
-
-- **Todas as atividades são gratuitas**
-
+--
 
 > **"Formar é muito mais do que puramente treinar o/a educando/a no desempenho de destrezas"**
 > 
 > (Freire, Paulo. "Pedagogia da Autonomia" - São Paulo: Paz e Terra, 1996, p.14)
-
-## Convites
-
-- R-Ladies e satRday - Organizar na sua cidade?
-
-- The Carpentries - se inscreva na capacitação para instrutor(a)
-
-- Latin-R - organização -> site e divulgação/redes sociais em português
 
 
 ---
