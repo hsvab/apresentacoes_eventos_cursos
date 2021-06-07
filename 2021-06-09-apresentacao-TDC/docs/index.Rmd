@@ -14,7 +14,7 @@ layout: true
   
 <div class="my-footer"><span>
 
-Twitter: <a href='https://twitter.com/hsvab'>@hsvab</a> | <a href='mailto:hsvab@hsvab.eng.br'>hsvab@hsvab.eng.br</a> | <a href='https://www.linkedin.com/in/hsvab/'> LinkedIn </a> | Apresentação em: <a href='http://bit.ly/milz2rday'> bit.ly/milz2rday </a>
+Twitter: <a href='https://twitter.com/hsvab'>@hsvab</a> | <a href='mailto:hsvab@hsvab.eng.br'>hsvab@hsvab.eng.br</a> | <a href='https://www.linkedin.com/in/hsvab/'> LinkedIn </a> | Apresentação em: <a href='http://bit.ly/TDC2021-RLadies'> http://bit.ly/TDC2021-RLadies </a>
 
 
 </span></div> 
